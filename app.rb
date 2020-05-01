@@ -22,9 +22,4 @@ class BirthdayApp < Sinatra::Base
     erb :birthday
   end
 
-  get '/test' do
-
-    erb :birthday
-  end
-
 end
