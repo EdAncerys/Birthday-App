@@ -1,16 +1,46 @@
 <html>
   <head>
     <style>
-      h1, h2 {text-align: center;}
+      h1, h2, .form {text-align: center;}
       p {text-align: center;}
     </style>
   </head>
   <body>
 
   <h1>Birthday App Home Page</h1>
-  <h2>Whats Your Name?</h2>
+
+  <form class="form" action="/user" method="post">
+
+    <label for="enter_name">
+      <h2>Whats Your Name?</h2>
+      <input type="text" name="name">
+    </label>
+    <label for="enter_bday">
+      <h2>When is your Birthday?</h2>
+      Day:
+      <input type="text" name="day">
+    </label>  
+      Month:
+    <select name="month">
+      <option value="" selected disabled hidden>Choose here</option>
+      <option value="January">January</option>
+      <option value="February">February</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+    </select>
+    <input type="submit" value="Submit">
+
+  </form>
 
   </body>
 </html>
 
-
+  
