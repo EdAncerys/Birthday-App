@@ -1,13 +1,13 @@
 class Birthday 
   attr_reader :todays_day
 
-  def nisialize
+  def initialize
     @todays_day = Time.new
   end
 
   def print_message(bday_day, bday_month, name)
     fail "Happy Brthday #{name}" if birthday?(bday_day, bday_month)
-    # days_till_bday(bday_day, bday_monthn, name)
+    days_till_bday(bday_day, bday_month, name)
   end
 
   private
@@ -16,8 +16,10 @@ class Birthday
     @todays_day.day == bday_day && @todays_day.month == bday_month
   end
 
-  def days_till_bday
-
+  def days_till_bday(bday_day, bday_month, name)
+    day = (@todays_day.day - bday_day).abs
+    month = (@todays_day.month - bday_month).abs
+    "#{day} days and #{month} month till your Birthday #{name}"
   end
 
 end
