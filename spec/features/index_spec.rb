@@ -1,5 +1,5 @@
 feature '@index' do
-  scenario 'should have greeter' do
+  scenario 'should have greeting' do
     visit('/')
     expect(page).to have_content 'Birthday App Home Page'
   end
