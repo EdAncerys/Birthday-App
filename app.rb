@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require './lib/birthday'
 
 class BirthdayApp < Sinatra::Base
   enable :sessions
@@ -19,6 +20,7 @@ class BirthdayApp < Sinatra::Base
     @name = session[:name]
     @day = session[:day]
     @month = session[:month]
+    @birthday = Birthday.new
     erb :birthday
   end
 

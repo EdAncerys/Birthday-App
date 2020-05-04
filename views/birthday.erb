@@ -4,4 +4,6 @@ Your name: <%= @name %> </br>
 Date of birth: <%= @day %> </br>
 Month of birth: <%= @month %> </br>
 
-<%= Time.new %>
+<%= @birthday.print_message(@day, @month, @name) %>
+
+<h3><a href="/">Home</a></h3>
