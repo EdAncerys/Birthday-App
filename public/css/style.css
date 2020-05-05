@@ -6,3 +6,10 @@
 h1, h2, h3, h4, .form {
   text-align: center;
 }
+.text_div {
+  text-align: center;
+  margin-top: 5em;
+}
+.blue {
+  color: rgba(52, 52, 157, 0.859);
+}

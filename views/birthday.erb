@@ -4,15 +4,16 @@
   </head>
   <body>
 
-    <h1>Hello <%= @name %></h1>
-    <h3>Your date of birth is on the <%= @day %> of <%= @month %></h3>
-
-    Date of birth: <%= @day %> </br>
-    Month of birth: <%= @month %> </br>
-
-    <%= @birthday.print_message(@day, @month, @name) %>
-
-    <h3><a href="/">Home</a></h3>
+    <div class="text_div">
+      <% if @name == "" || @day == "" || @month == "" %>
+        <h3>Plese enter all your details first !</h3>
+      <% else %>
+        <h1>Hello <%= @name %></h1>
+        <h3>Your date of birth is on the <%= @day %> of <%= @birthday.return_month(@month) %></h3>
+        <h3 class='blue'><%= @birthday.print_message(@day, @month, @name) %></h3>
+      <% end %>
+        <h3><a href="/">Home</a></h3>
+    </div>
 
   </body>
 </html>
