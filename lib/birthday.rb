@@ -10,6 +10,24 @@ class Birthday
     days_till_bday(bday_day, bday_month, name)
   end
 
+  def return_month(value)
+    month = {
+      "1" => "January",
+      "2" => "February",
+      "3" => "March",
+      "4" => "April",
+      "5" => "May",
+      "6" => "June",
+      "7" => "July",
+      "8" => "August",
+      "9" => "September",
+      "10" => "October",
+      "11" => "November",
+      "12" => "December",
+    }
+    month[value]
+  end
+
   private
 
   def birthday?(bday_day, bday_month)

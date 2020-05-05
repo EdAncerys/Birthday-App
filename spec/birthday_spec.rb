@@ -3,7 +3,7 @@ require 'birthday'
 describe Birthday do 
   let(:bday) { double("bday", days_left: "2 days and 3 month")}
   let(:name) { double("name", bday_name: "Dave") }
-  let(:month) { double(2) }
+  let(:month) { double("month", bday_month: "2") }
   let(:day) { double("day", bday_day: 2) }
 
   context '#print_message' do
@@ -16,6 +16,10 @@ describe Birthday do
       allow(subject.todays_day).to receive(:day) { 3 }
       allow(subject.todays_day).to receive(:month) { 3 }
       expect(subject.print_message(4, 4, name)).to eq "1 days and 1 month till your Birthday #{name}"
+    end
+
+    it 'should return month' do
+      expect(subject.return_month(month.bday_month)).to eq 'February'
     end
   end
 
