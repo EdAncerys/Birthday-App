@@ -9,7 +9,7 @@ describe Birthday do
   context '#print_message' do
     it 'should return happy bday' do
       allow(subject).to receive(:birthday?) { true }
-      expect{ subject.print_message(day, month, name) }.to raise_error "Happy Brthday #{name}"
+      expect(subject.print_message(day, month, name)).to eq "Happy Brthday #{name}"
     end
 
     it 'should return day and month left till bday' do

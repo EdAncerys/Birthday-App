@@ -10,12 +10,6 @@ class Birthday
     days_till_bday(bday_day, bday_month, name)
   end
 
-  def test(bday_day, bday_month, name)
-    day = (@todays_day.day - bday_day).abs
-    month = (@todays_day.month - bday_month).abs
-    "#{day} days and #{month} month till your Birthday #{name}"
-  end
-
   private
 
   def birthday?(bday_day, bday_month)

@@ -1,9 +1,18 @@
-<h1>Happy Birthday <%= @name %> </h1>
+<html>
+  <head>
+    <link type='text/css' rel='stylesheet' href='css/style.css'>
+  </head>
+  <body>
 
-Your name: <%= @name %> </br>
-Date of birth: <%= @day %> </br>
-Month of birth: <%= @month %> </br>
+    <h1>Hello <%= @name %></h1>
+    <h3>Your date of birth is <%= @day %> of <%= @month %></h3>
 
-<%= @birthday.print_message(@day, @month, @name) %>
+    Date of birth: <%= @day %> </br>
+    Month of birth: <%= @month %> </br>
 
-<h3><a href="/">Home</a></h3>
+    <%= @birthday.print_message(@day, @month, @name) %>
+
+    <h3><a href="/">Home</a></h3>
+
+  </body>
+</html>
